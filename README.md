@@ -1,4 +1,5 @@
 ## Notification !
+credit:wazaki-kensu
 https://github.com/ChoruTiktokers182/c5c-Fbstate
 Note! This is a vegito Remake Product (By Schmavery's Facebook-Chat-Api, The Author Is Not Responsible! ), If There's Any Error Please Try Using Another Product !
 
