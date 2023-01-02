@@ -1,6 +1,6 @@
 ## Notification !
-  * Developers: @KanzuWakazaki - @HarryWakazaki Modified: Choru TikTokers 
 https://github.com/ChoruTiktokers182/c5c-Fbstate
+
 Note! This is a vegito Remake Product (By Schmavery's Facebook-Chat-Api, The Author Is Not Responsible! ), If There's Any Error Please Try Using Another Product !
 
 ## Support For :
@@ -20,11 +20,11 @@ Note ! If You Want To Share This Api Please See The Document At [Here](https://g
 
 If You Want To Use It, Download It By:
 ```bash
-npm i fca-anya-remake
+npm i fca-vegito-remake
 ```
 or
 ```bash
-npm install fca-anya-remake
+npm install fca-vegito-remake
 ```
 
 It Will Load Into node_modules (Your Lib) - Note Replit Won't Show Where to Find
@@ -33,11 +33,11 @@ It Will Load Into node_modules (Your Lib) - Note Replit Won't Show Where to Find
 
 If You Want To Use The Latest Version Or Update Then Go To Terminal Or Command Prompt Enter :
 ```bash
-npm install fca-anya-remake@latest
+npm install fca-vegito-remake@latest
 ```
 Or
 ```bash
-npm i fca-anya-remake@latest
+npm i fca-vegito-remake@latest
 ```
 
 ## If You Want To Test Api

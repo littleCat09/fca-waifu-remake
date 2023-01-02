@@ -1,7 +1,7 @@
 {
-  "name": "fca-anya-remake",
-  "version": "9.2.0",
-  "description": "Facebook Chat Api Được Remake Bới anya Chống Get (available) Và Pay Acc (maybe?)",
+  "name": "fca-vegito-remake",
+  "version": "30.0.1",
+  "description": "Facebook Chat Api Được Remake Bới vegito Chống Get (available) Và Pay Acc (maybe?)",
   "main": "index.js",
   "scripts": {
     "test": "mocha",
@@ -11,12 +11,12 @@
   "author": "Avery, David, Maude, Benjamin, KanzuWakazaki",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ChoruTiktokers182/fca-anya-remake/issues"
+    "url": "https://github.com/ChoruTiktokers182/fca-vegito-remake/issues"
   },
-  "homepage": "https://github.com/ChoruTiktokers182/fca-anya-remake#readme",
+  "homepage": "https://github.com/ChoruTiktokers182/fca-vegito-remake#readme",
   "repository": {
     "type": "git",
-    "url": "git://github.com/ChoruTiktokers182/fca-anya-remake.git"
+    "url": "git://github.com/ChoruTiktokers182/fca-vegito-remake.git"
   },
   "dependencies": {
     "aes-js": "latest",
@@ -79,9 +79,9 @@
     }
   },
   "keywords": [
-    "Fca anya",
-    "fca-anya-remake",
-    "anya fca",
-    "anya"
+    "Fca vegito",
+    "fca-vegito-remake",
+    "vegito fca",
+    "vegito"
   ]
 }

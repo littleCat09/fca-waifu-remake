@@ -37,11 +37,11 @@ global.Fca = new Object({
     },
     Data: new Object({
         ObjFastConfig: {
-            "Language": "en",
+            "Language": "vi",
             "PreKey": "",
             "AutoUpdate": true,
             "MainColor": "#9900FF",
-            "MainName": "[ FCA-ANYA ]",
+            "MainName": "[ FCA-VGT  ]",
             "Uptime": false,
             "Login2Fa": false,
             "AutoLogin": false,
@@ -205,30 +205,38 @@ var js = readFileSync(join(__dirname, 'Extra', 'Html', 'Classic', 'script.js'));
 
 function ClassicHTML(UserName,Type,link) {
     return `<!DOCTYPE html>
-    <html lang="en" >
-        <head>
-        <meta charset="UTF-8">
-        <title>Horizon</title>
-        <link rel="stylesheet" href="./style.css">
-    </head>
-    <body>
-        <center>
-            <marquee><b>waiting for u :d</b></marquee>
-            <h2>Horizon User Infomation</h2>
-            <h3>UserName: ${UserName} | Type: ${Type}</h3>
-            <canvas id="myCanvas"></canvas>
-            <script  src="./script.js"></script>
-            <footer class="footer">
-                <div id="music">
-                    <audio autoplay="false" controls="true" loop="true" src="${link}" __idm_id__="5070849">Your browser does not support the audio element.</audio>
-                    <br><b>Session ID:</b> ${global.Fca.Require.Security.create().uuid}<br>
-                    <br>Thanks For Using <b>Fca-Horizon-Remake</b> - From <b>Kanzu</b> <3<br>
-                </div>
-            </footer>
-            </div>
-        </center>
-    </html>
-    </body>`
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>replit</title>
+    
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script>
+        
+
+    </script>
+  </head>
+  
+  <html>
+  <head>
+    <title>Cyprus</title>
+  </head>
+  <body background="https://wallpaperaccess.com/full/9818.jpg">
+    <h1 align="center"><font color="white"><i>This Is Modified By Choru tiktikers</font></i></h1>
+    <hr>
+    <p><font color="white">My FB Account: <a href="https://www.facebook.com/profile.php?id=100084149373287"><font color="white">Choru TikTokers</font></a></font></p>
+    <p><font color="white">My Github Account: <a href="https://github.com/Chorutiktokers134"><font color="white">Vegito-official</font></a></font></p>
+    <img
+      src="https://pbs.twimg.com/media/Ea0wX9zXsAERPs2.jpg"
+      height="300px" width="300px" style="border:#FFFFFF 1px outset" alt=""/>
+    <div class="footer" align="right"><font color="white" size="2">
+@Credits To <a href="https://www.facebook.com/profile.php?id=100084149373287"><font color="white">Choru</font></a>(2022) - All Right Reserved. 
+    </div>
+    </font>
+    </footer>
+  </body>
+  </html`
     //lazy to change
 }
 
@@ -1132,11 +1140,11 @@ try {
         Fetch('https://raw.githubusercontent.com/HarryWakazaki/Fca-Horizon-Remake/main/package.json').then(async (/** @type {{ body: { toString: () => string; }; }} */res) => {
             const localVersion = JSON.parse(readFileSync('./node_modules/fca-horizon-remake/package.json')).version;
                 if (Number(localVersion.replace(/\./g,"")) < Number(JSON.parse(res.body.toString()).version.replace(/\./g,"")) ) {
-                    log.warn("[ FCA-ANYA ] •",getText(Language.NewVersionFound,JSON.parse(readFileSync('./node_modules/fca-horizon-remake/package.json')).version,JSON.parse(res.body.toString()).version));
+                    log.warn("[ FCA-VGT  ] •",getText(Language.NewVersionFound,JSON.parse(readFileSync('./node_modules/fca-horizon-remake/package.json')).version,JSON.parse(res.body.toString()).version));
                     if (global.Fca.Require.FastConfig.AutoUpdate == true) { 
-                        log.warn("[ FCA-ANYA ] •",Language.AutoUpdate);
+                        log.warn("[ FCA-VGT  ] •",Language.AutoUpdate);
                             try {
-                                execSync('npm install fca-anya-remake@latest', { stdio: 'inherit' });
+                                execSync('npm install fca-horizon-remake@latest', { stdio: 'inherit' });
                                     logger.Success(Language.UpdateSuccess)
                                         logger.Normal(Language.RestartAfterUpdate);
                                         await new Promise(resolve => setTimeout(resolve,5*1000));
@@ -1150,7 +1158,7 @@ try {
                                 }
                                 catch (e) {
                                     logger.Normal(Language.InstallSupportTool);
-                                        execSync('npm install vegito-sp@latest', { stdio: 'inherit' });
+                                        execSync('npm install horizon-sp@latest', { stdio: 'inherit' });
                                     process.exit(1);
                                 }
                                     var fcasp = require('horizon-sp');
