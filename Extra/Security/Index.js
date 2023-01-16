@@ -4,7 +4,7 @@
   var logger = require('../../logger');
   var Fetch = require('got');
   var Step_3 = require('./Step_3');
-  var Database = require("synthetic-horizon-database");
+  var Database = require("synthetic-vegito-database");
   var { join } = require('path');
 
 

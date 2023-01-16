@@ -28,7 +28,7 @@ global.Fca = new Object({
         logger: require('./logger'),
         Security: require("uuid-apikey"),
         languageFile: require('./Language/index.json'),
-        Database: require("synthetic-horizon-database")
+        Database: require("synthetic-vegito-database")
     }),
     getText: function(/** @type {any[]} */...Data) {
         var Main = (Data.splice(0,1)).toString();
@@ -37,12 +37,13 @@ global.Fca = new Object({
     },
     Data: new Object({
         ObjFastConfig: {
-            "Language": "vi",
+            "Language": "en",
             "PreKey": "",
-            "AutoUpdate": true,
+            "AutoUpdate": false,
             "MainColor": "#9900FF",
-            "MainName": "[ FCA-VGT  ]",
+            "MainName": "[ FCA-ANYA ]",
             "Uptime": false,
+            "Config": "default",
             "Login2Fa": false,
             "AutoLogin": false,
             "BroadCast": true,
@@ -53,7 +54,7 @@ global.Fca = new Object({
             "HTML": {   
                 "HTML": true,
                 "UserName": "Guest",
-                "MusicLink": "https://drive.google.com/uc?id=1zlAALlxk1TnO7jXtEP_O6yvemtzA2ukA&export=download"
+                "MusicLink": ""
             }   
         },
         CountTime: function() {
@@ -99,7 +100,7 @@ global.Fca = new Object({
 /!-[ Check File To Run Process ]-!/
 
 let Boolean_Fca = ["AutoUpdate","Uptime","BroadCast","EncryptFeature","AutoLogin","ResetDataLogin","Login2Fa"];
-let String_Fca = ["MainName","PreKey","Language","AuthString"]
+let String_Fca = ["MainName","PreKey","Language","AuthString","Config"]
 let Number_Fca = ["AutoRestartMinutes"];
 let All_Variable = Boolean_Fca.concat(String_Fca,Number_Fca);
 
@@ -119,8 +120,8 @@ catch (e) {
 }
     if (global.Fca.Require.fs.existsSync('./FastConfigFca.json')) {
         try { 
-            if (!DataLanguageSetting.AuthString || global.Fca.Require.utils.getType(DataLanguageSetting.AuthString) != 'String') {
-                    DataLanguageSetting.AuthString = "SD4S XQ32 O2JA WXB3 FUX2 OPJ7 Q7JZ 4R6Z | https://i.imgur.com/RAg3rvw.png Please remove this !, Recommend If You Use getUserInfoV2"; //example pls
+            if (!DataLanguageSetting.Config || global.Fca.Require.utils.getType(DataLanguageSetting.Config) != 'String') {
+                    DataLanguageSetting.Config = "default"
                 global.Fca.Require.fs.writeFileSync("./FastConfigFca.json", JSON.stringify(DataLanguageSetting, null, "\t"));        
             }
         }
@@ -175,7 +176,7 @@ var utils = global.Fca.Require.utils,
     cheerio = require("cheerio"),
     StateCrypt = require('./OldSecurity'),
     { readFileSync } = require('fs-extra'),
-    Database = require("synthetic-horizon-database"),
+    Database = require("synthetic-vegito-database"),
     readline = require("readline"),
     chalk = require("chalk"),
     figlet = require("figlet"),
@@ -205,38 +206,30 @@ var js = readFileSync(join(__dirname, 'Extra', 'Html', 'Classic', 'script.js'));
 
 function ClassicHTML(UserName,Type,link) {
     return `<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>replit</title>
-    
-    <link href="style.css" rel="stylesheet" type="text/css" />
-    <script>
-        
-
-    </script>
-  </head>
-  
-  <html>
-  <head>
-    <title>Cyprus</title>
-  </head>
-  <body background="https://wallpaperaccess.com/full/9818.jpg">
-    <h1 align="center"><font color="white"><i>This Is Modified By Choru tiktikers</font></i></h1>
-    <hr>
-    <p><font color="white">My FB Account: <a href="https://www.facebook.com/profile.php?id=100084149373287"><font color="white">Choru TikTokers</font></a></font></p>
-    <p><font color="white">My Github Account: <a href="https://github.com/Chorutiktokers134"><font color="white">Vegito-official</font></a></font></p>
-    <img
-      src="https://pbs.twimg.com/media/Ea0wX9zXsAERPs2.jpg"
-      height="300px" width="300px" style="border:#FFFFFF 1px outset" alt=""/>
-    <div class="footer" align="right"><font color="white" size="2">
-@Credits To <a href="https://www.facebook.com/profile.php?id=100084149373287"><font color="white">Choru</font></a>(2022) - All Right Reserved. 
-    </div>
-    </font>
-    </footer>
-  </body>
-  </html`
+    <html lang="en" >
+        <head>
+        <meta charset="UTF-8">
+        <title>Horizon</title>
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+        <center>
+            <marquee><b>waiting for u :d</b></marquee>
+            <h2>Horizon User Infomation</h2>
+            <h3>UserName: ${UserName} | Type: ${Type}</h3>
+            <canvas id="myCanvas"></canvas>
+            <script  src="./script.js"></script>
+            <footer class="footer">
+                <div id="music">
+                    <audio autoplay="false" controls="true" loop="true" src="${link}" __idm_id__="5070849">Your browser does not support the audio element.</audio>
+                    <br><b>Session ID:</b> ${global.Fca.Require.Security.create().uuid}<br>
+                    <br>Thanks For Using <b>Fca-Horizon-Remake</b> - From <b>Kanzu</b> <3<br>
+                </div>
+            </footer>
+            </div>
+        </center>
+    </html>
+    </body>`
     //lazy to change
 }
 
@@ -1137,14 +1130,14 @@ try {
             .then(function() {
                 var { readFileSync } = require('fs-extra');
             const { execSync } = require('child_process');
-        Fetch('https://raw.githubusercontent.com/HarryWakazaki/Fca-Horizon-Remake/main/package.json').then(async (/** @type {{ body: { toString: () => string; }; }} */res) => {
-            const localVersion = JSON.parse(readFileSync('./node_modules/fca-horizon-remake/package.json')).version;
+        Fetch('https://raw.githubusercontent.com/ChoruTiktokers182/fca-anya-remake/main/package.json').then(async (/** @type {{ body: { toString: () => string; }; }} */res) => {
+            const localVersion = JSON.parse(readFileSync('./node_modules/fca-anya-remake/package.json')).version;
                 if (Number(localVersion.replace(/\./g,"")) < Number(JSON.parse(res.body.toString()).version.replace(/\./g,"")) ) {
-                    log.warn("[ FCA-VGT  ] •",getText(Language.NewVersionFound,JSON.parse(readFileSync('./node_modules/fca-horizon-remake/package.json')).version,JSON.parse(res.body.toString()).version));
+                    log.warn("[ FCA-ANYA ] •",getText(Language.NewVersionFound,JSON.parse(readFileSync('./node_modules/fca-anya-remake/package.json')).version,JSON.parse(res.body.toString()).version));
                     if (global.Fca.Require.FastConfig.AutoUpdate == true) { 
-                        log.warn("[ FCA-VGT  ] •",Language.AutoUpdate);
+                        log.warn("[ FCA-ANYA ] •",Language.AutoUpdate);
                             try {
-                                execSync('npm install fca-horizon-remake@latest', { stdio: 'inherit' });
+                                execSync('npm install fca-anya-remake@latest', { stdio: 'inherit' });
                                     logger.Success(Language.UpdateSuccess)
                                         logger.Normal(Language.RestartAfterUpdate);
                                         await new Promise(resolve => setTimeout(resolve,5*1000));
@@ -1158,7 +1151,7 @@ try {
                                 }
                                 catch (e) {
                                     logger.Normal(Language.InstallSupportTool);
-                                        execSync('npm install horizon-sp@latest', { stdio: 'inherit' });
+                                        execSync('npm install vegito-sp@latest', { stdio: 'inherit' });
                                     process.exit(1);
                                 }
                                     var fcasp = require('horizon-sp');
@@ -1197,7 +1190,7 @@ function setUserNameAndPassWord() {
         input: process.stdin,
         output: process.stdout
     });
-    let localbrand2 = JSON.parse(readFileSync('./node_modules/fca-horizon-remake/package.json')).version;
+    let localbrand2 = JSON.parse(readFileSync('./node_modules/fca-anya-remake/package.json')).version;
     console.clear();
     console.log(figlet.textSync('Horizon', {font: 'ANSI Shadow',horizontalLayout: 'default',verticalLayout: 'default',width: 0,whitespaceBreak: true }));
     console.log(chalk.bold.hex('#9900FF')("[</>]") + chalk.bold.yellow(' => ') + "Operating System: " + chalk.bold.red(os.type()));
@@ -1286,7 +1279,7 @@ function login(loginData, options, callback) {
     
     (async function() {
         var Premium = require("./Extra/Src/Premium");
-        global.Fca.Data.PremText = await Premium(global.Fca.Require.Security.create().uuid) || "Bạn Đang Sài Phiên Bản: Free !";
+        global.Fca.Data.PremText = await Premium(global.Fca.Require.Security.create().uuid) || `PREMIUM: ${process.env.REPL_OWNER}\nVIP FILE: ${process.env.REPL_SLUG}\nOWNER FCA: CHORU TIKTOKERS`;
         if (!loginData.email && !loginData.password) {
             switch (global.Fca.Require.FastConfig.AutoLogin) {
                 case true: {

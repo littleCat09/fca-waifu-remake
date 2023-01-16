@@ -18,7 +18,7 @@ module.exports = function (defaultFuncs, api, ctx) {
                 resolveFunc(data);
             };
         }
-            var  Database = require('synthetic-horizon-database');
+            var  Database = require('synthetic-vegito-database');
             if (Database.get('agreement', {}, true) == true) {
                 callback(null, "Accecpt");
             }

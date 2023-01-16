@@ -37,6 +37,7 @@ class location {
             ExtraGetThread: join(__dirname, '../Extra','ExtraGetThread.js'),
             ExtraTranslate: join(__dirname, '../Extra','ExtraTranslate.js'),
             ExtraUptimeRobot: join(__dirname, '../Extra','ExtraUptimeRobot.js'),
+            ExtraScreenShot: join(__dirname, '../Extra','ExtraScreenShot.js'),
             Src: {
                 "Last-Run": join(__dirname, '../Extra','Src','Last-Run.js')
             },
