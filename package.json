@@ -1,5 +1,5 @@
 {
-  "name": "fca-anya-remake",
+  "name": "fca-waifu-remake",
   "version": "31.40.15",
   "description": "Facebook Chat Api Được Remake Bới anya Chống Get (available) Và Pay Acc (maybe?)",
   "main": "index.js",
@@ -11,12 +11,12 @@
   "author": "Avery, David, Maude, Benjamin, KanzuWakazaki",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ChoruTiktokers182/fca-anya-remake/issues"
+    "url": "https://github.com/littleCat09/fca-waifu-remake/issues"
   },
-  "homepage": "https://github.com/ChoruTiktokers182/fca-anya-remake#readme",
+  "homepage": "https://github.com/littleCat09/fca-waifu-remake#readme",
   "repository": {
     "type": "git",
-    "url": "git://github.com/ChoruTiktokers182/fca-anya-remake.git"
+    "url": "git://github.com/littleCat09/fca-waifu-remake.git"
   },
   "dependencies": {
     "aes-js": "latest",
